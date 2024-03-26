@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <title>Registration Form</title>
     <style>
-        /* Basic styling */
+       
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color:white;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
             margin: 50px auto;
-            background-color: #fff;
+            background-color: aqua;
             padding: 20px;
             border-radius: 8px;
+            max-height: 100%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
             margin-bottom: 20px;
+            text-align: center;
         }
         label {
             display: block;
@@ -35,7 +36,7 @@
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 7px;
             box-sizing: border-box;
         }
         input[type="submit"] {
@@ -45,16 +46,67 @@
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 4px;
+            align-items: bottom;
+            margin: auto;
         }
         input[type="submit"]:hover {
             background-color: #0056b3;
+            align-items:center;
+            justify-content: center;
+             margin: auto;
+
         }
+
+         input[type="date"]: {
+                width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+
+        }
+        .Submit{
+            justify-content: center;
+            display:flex;
+        }
+
+        button{
+            height: 40px;
+            width: 50%;
+            font-size: 20px;
+        }
+
+
+        .bd{
+
+
+             width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+           
+            border-radius: 7px;
+            
+
+
+        }
+
+
+           select{
+            padding: 10px;
+            width: 100%;
+            border-radius: 7px;
+           }
+
+
+
+
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Registration Form</h2>
-        <form action="submit_registration.php" method="POST">
+        <form action="">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
@@ -67,7 +119,30 @@
             <label for="confirm_password">Confirm Password:</label>
             <input type="password" id="confirm_password" name="confirm_password" required>
 
-            <input type="submit" value="Register">
+            <label for="">Your Birthdate:</label>
+               <div class="bd">
+                <input type="date" YOUR BIRTHDATE name="DATE" required>
+
+                   
+               </div>
+                <div>
+                    <label>Select your Country</label>
+               <select>
+                   <option>India</option>
+                   <option>South Africa</option>
+                   <option>Russia</option>
+                   <option>Us</option>
+                   <option>Chaina</option>
+                   <option>OTHER</option>
+               </select required>
+            </div>
+
+             <br>
+                <br>
+             <div class="Submit">
+                <button type="submit"> Submit </button>
+             </div>
+        
         </form>
     </div>
 </body>
